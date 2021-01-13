@@ -12,4 +12,11 @@ describe "10 minute walk" do
     expect(result).to eq true
   end
 
+  it "invalid walk" do
+    result1 = ten_minute_walk?(['w', 's', 'e', 'n', 'n', 'e', 's', 'w', 'w', 'w']) # => false
+    expect(result1).to eq false
+    result2 = ten_minute_walk?(['w', 's', 'e', 's', 's', 'e', 's', 'w', 'n', 'n']) # => false
+    expect(result2).to eq false
+  end
+
 end
