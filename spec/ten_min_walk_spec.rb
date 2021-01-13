@@ -7,4 +7,9 @@ describe "10 minute walk" do
     expect(result).to eq false
   end
 
+  it "returns true when walk is valid" do
+    result = ten_minute_walk?(['w', 's', 'e', 'e', 'n', 'n', 'e', 's', 'w', 'w']) 
+    expect(result).to eq true
+  end
+
 end
